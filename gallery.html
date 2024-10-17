@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work - LadyTin Weddings</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;600&family=Libre+Baskerville:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="overlay"></div> 
+    <header>
+        <div class="logo">
+            <img src="./Images/ladytin_White-01.png" alt="LadyTin Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html" class="active">Our Work</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Our Work Section -->
+    <section class="our-work-section">
+        <h2>Our Work</h2>
+        <p>Explore our exquisite weddings and events that blend elegance with personalized touches.</p>
+        <div class="work-gallery">
+    
+            <!-- Aarit Shoot -->
+            <div class="work-item" onclick="openAlbum(0)">
+                <img src="./Images/Aarit Shoot/LadyTin-1.jpg" alt="Aarit Shoot">
+                <h3>Aarit Shoot</h3>
+                <p>Memorable moments captured from the Aarit shoot.</p>
+            </div>
+    
+            <!-- Areej Bashir Shoot -->
+            <div class="work-item" onclick="openAlbum(1)">
+                <img src="./Images/ArejBashirShoot/AreejBashirPhotography (1).jpg" alt="Areej Bashir Shoot">
+                <h3>Areej Bashir Shoot</h3>
+                <p>A stunning event captured with elegance and style.</p>
+            </div>
+    
+            <!-- Carol & Jatin Wedding -->
+            <div class="work-item" onclick="openAlbum(2)">
+                <img src="./Images/Carol & Jatin/DSC_2902.jpg" alt="Carol & Jatin Wedding">
+                <h3>Carol & Jatin Wedding</h3>
+                <p>Celebrate the beautiful union of Carol & Jatin.</p>
+            </div>
+    
+            <!-- Kolkila Wedding -->
+            <div class="work-item" onclick="openAlbum(3)">
+                <img src="./Images/Kolkila Weeding/_TUR1692.jpg" alt="Kolkila Wedding">
+                <h3>Kolkila Wedding</h3>
+                <p>A magnificent wedding filled with vibrant moments.</p>
+            </div>
+    
+            <!-- Papiya Nithin Shoot -->
+            <div class="work-item" onclick="openAlbum(4)">
+                <img src="./Images/Papiya Nithin/Papiya Nithin  Natasha Gillett Photography--16.jpg" alt="Papiya Nithin Shoot">
+                <h3>Papiya Nithin Shoot</h3>
+                <p>Beautiful moments from Papiya and Nithin's photoshoot.</p>
+            </div>
+    
+            <!-- Rooh Shoot -->
+            <div class="work-item" onclick="openAlbum(5)">
+                <img src="./Images/Rooh Shoot/RAD50335-Edit.jpg" alt="Rooh Shoot">
+                <h3>Rooh Shoot</h3>
+                <p>A vibrant photoshoot capturing the essence of Rooh.</p>
+            </div>
+    
+            <!-- Swati & Jay Wedding -->
+            <div class="work-item" onclick="openAlbum(6)">
+                <img src="./Images/Swati & Jay/Swathi+Jay-NewOrleans-UshnaKhanPhoto-11.jpg" alt="Swati & Jay Wedding">
+                <h3>Swati & Jay Wedding</h3>
+                <p>A grand celebration of love between Swati & Jay.</p>
+            </div>
+    
+            <!-- Tribeca Wedding -->
+            <div class="work-item" onclick="openAlbum(7)">
+                <img src="./Images/Tribeca/nextrow2.jpg" alt="Tribeca Wedding">
+                <h3>Tribeca Wedding</h3>
+                <p>A stylish wedding event in the heart of Tribeca.</p>
+            </div>
+    
+        </div>
+    </section>
+
+    <!-- Modal for displaying albums -->
+    <div id="albumModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <img id="mainImage" src="" alt="Main Image">
+            <div class="thumbnail-container">
+                <!-- Thumbnails will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="contact-info">
+            <p><strong>Address</strong><br>San Jose, CA, USA, 95196</p>
+            <p><strong>Opening hours</strong><br>Sun-Mon: 10am - 10pm</p>
+        </div>
+        <div class="logo">
+            <img src="./Images/ladytin_White-01.png" alt="LadyTin Logo">
+            <h2>LADY TIN</h2>
+            <p>WEDDINGS</p>
+        </div>
+        <div class="contact-details">
+            <p><strong>Phone</strong><br>+1 408-329-0018</p>
+            <p><strong>Email</strong><br><a href="mailto:LadyTin@gmail.com">LadyTin@gmail.com</a></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Code -->
+    <script>
+        // Array of albums, each containing multiple images
+        const albums = [
+            [
+                "./Images/Aarit Shoot/LadyTin-1.jpg",
+                "./Images/Aarit Shoot/LadyTin-2.jpg",
+                "./Images/Aarit Shoot/LadyTin-6.jpg",
+                "./Images/Aarit Shoot/LadyTin-22.jpg"
+            ],
+            [
+                "./Images/ArejBashirShoot/AreejBashirPhotography (1).jpg",
+                "./Images/ArejBashirShoot/AreejBashirPhotography-2.jpg",
+                "./Images/ArejBashirShoot/AreejBashirPhotography-3.jpg",
+                "./Images/ArejBashirShoot/AreejBashirPhotography.jpg"
+            ],
+            [
+                "./Images/Carol & Jatin/DSC_2870.jpg",
+                "./Images/Carol & Jatin/DSC_2902.jpg",
+                "./Images/Carol & Jatin/DSC_2928.jpg",
+                "./Images/Carol & Jatin/DSC_3025.jpg",
+                "./Images/Carol & Jatin/DSC_3037.jpg",
+                "./Images/Carol & Jatin/DSC_3062.jpg",
+                "./Images/Carol & Jatin/DSC_3302.jpg",
+                "./Images/Carol & Jatin/DSC_3481.jpg",
+                "./Images/Carol & Jatin/DSC_3645.jpg",
+                "./Images/Carol & Jatin/DSC_3781.jpg"
+            ],
+            [
+                "./Images/Kolkila Weeding/_TUR1579.jpg",
+                "./Images/Kolkila Weeding/_TUR1689.jpg",
+                "./Images/Kolkila Weeding/_TUR1692.jpg",
+                "./Images/Kolkila Weeding/_TUR1725.jpg"
+            ],
+            [
+                "./Images/Papiya Nithin/Papiya Nithin Natasha Gillett Photography--5.jpg",
+                "./Images/Papiya Nithin/Papiya Nithin Natasha Gillett Photography--10.jpg",
+                "./Images/Papiya Nithin/Papiya Nithin Natasha Gillett Photography--16.jpg",
+                "./Images/Papiya Nithin/Papiya Nithin Natasha Gillett Photography--24.jpg",
+                "./Images/Papiya Nithin/Papiya Nithin Natasha Gillett Photography--0036.jpg",
+                "./Images/Papiya Nithin/Papiya Nithin Natasha Gillett Photography--0624.jpg"
+            ],
+            [
+                "./Images/Rooh Shoot/RAD50116-2.jpg",
+                "./Images/Rooh Shoot/RAD50335-Edit.jpg",
+                "./Images/Rooh Shoot/RAD50575-Edit.jpg",
+                "./Images/Rooh Shoot/rooh2.jpg"
+            ],
+            [
+                "./Images/Swati & Jay/Swathi+Jay-NewOrleans-UshnaKhanPhoto-11.jpg",
+                "./Images/Swati & Jay/Swathi+Jay-NewOrleans-UshnaKhanPhoto-33.jpg",
+                "./Images/Swati & Jay/Swathi+Jay-NewOrleans-UshnaKhanPhoto-34.jpg",
+                "./Images/Swati & Jay/Swathi+Jay-NewOrleans-UshnaKhanPhoto-80.jpg",
+                "./Images/Swati & Jay/Swathi+Jay-NewOrleans-UshnaKhanPhoto-92.jpg",
+                "./Images/Swati & Jay/Swathi+Jay-NewOrleans-UshnaKhanPhoto-97.jpg",
+                "./Images/Swati & Jay/Swathi+Jay-NewOrleans-UshnaKhanPhoto-166.jpg",
+                "./Images/Swati & Jay/Swathi+Jay-NewOrleans-UshnaKhanPhoto-169.jpg",
+                "./Images/Swati & Jay/Swathi+Jay-NewOrleans-UshnaKhanPhoto-200.jpg",
+                "./Images/Swati & Jay/Swathi+Jay-NewOrleans-UshnaKhanPhoto-258.jpg",
+                "./Images/Swati & Jay/Swathi+Jay-NewOrleans-UshnaKhanPhoto-273.jpg",
+                "./Images/Swati & Jay/Swathi+Jay-NewOrleans-UshnaKhanPhoto-355.jpg"
+            ],
+            [
+                "./Images/Tribeca/nextrow2.jpg",
+                "./Images/Tribeca/postfinal.jpg",
+                "./Images/Tribeca/post4final.jpg",
+                "./Images/Tribeca/post6final.jpg"
+            ]
+        ];
+    
+        let currentAlbumIndex = 0;
+    
+        // Open the modal and display the thumbnails of the selected album
+        function openAlbum(albumIndex) {
+            currentAlbumIndex = albumIndex;
+            const album = albums[albumIndex];
+            document.getElementById("albumModal").style.display = "block";
+    
+            // Display the first image of the album in full size
+            document.getElementById("mainImage").src = album[0];  // Fixed line
+    
+            // Display all thumbnails
+            const thumbnailContainer = document.querySelector('.thumbnail-container');
+            thumbnailContainer.innerHTML = ''; // Clear previous thumbnails
+            album.forEach((imageSrc, index) => {  // Fixed line
+                const img = document.createElement('img');
+                img.src = imageSrc;
+                img.classList.add('thumbnail');
+                img.onclick = () => {
+                    document.getElementById("mainImage").src = imageSrc;
+                };
+                thumbnailContainer.appendChild(img);
+            });
+        }
+    
+        // Close the modal
+        function closeModal() {
+            document.getElementById("albumModal").style.display = "none";
+        }
+    </script>
+    <style>
+        /* Modal styles */
+           /* Background image styles */
+           body {
+            font-family: 'Libre Baskerville', serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: url('./Images/seamless-pattern-with-white-flowers-word-magnolia-gray-background.jpg') no-repeat center center fixed, linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));; /* Your background image path */
+            background-size: cover;
+            background-blend-mode: overlay;
+            color: #fff;
+        }
+
+        /* Overlay to darken the background */
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000; /* Ensure modal is above all */
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 80%;
+            text-align: center;
+        }
+
+        #mainImage {
+            height: 90vh;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+
+        .thumbnail-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .thumbnail {
+            width: 100px;
+            height: 70px;
+            cursor: pointer;
+            border: 2px solid white;
+            transition: border 0.2s;
+        }
+
+        .thumbnail:hover {
+            border: 2px solid #ddd;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover, .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        #mainImage {
+            height:90vh;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+
+        .thumbnail-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .thumbnail {
+            width: 100px;
+            height: 70px;
+            cursor: pointer;
+            border: 2px solid white;
+            transition: border 0.2s;
+        }
+
+        .thumbnail:hover {
+            border: 2px solid #ddd;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover, .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</body>
+</html>
